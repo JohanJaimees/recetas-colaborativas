@@ -16,4 +16,13 @@ public class GestorRecetas {
     recetas.removeIf(receta -> receta.getNombre().equalsIgnoreCase(nombre));
     }
 
+    public Receta buscarReceta(String nombre) {
+        for (Receta receta : recetas) {
+            if (receta.getNombre().equalsIgnoreCase(nombre)) {
+                return receta;
+            }
+        }
+        return null; // Si no se encuentra la receta
+    }
+    
 }
